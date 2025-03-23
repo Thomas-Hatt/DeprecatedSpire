@@ -1,0 +1,18 @@
+{
+  "${modID}:Yin": {
+    "NAME": "Yin",
+    "FLAVOR": "Deprecated on 07-09-2019. You cannot have light without dark. Or can you?",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ySkill, gain #b1 temporary #yStrength."
+    ]
+  },
+
+  "${modID}:Dodecahedron": {
+    "NAME": "Dodecahedron",
+    "FLAVOR": "Deprecated on 10-24-2019. The runes are indecipherable.",
+    "DESCRIPTIONS": [
+      "If your HP is full, gain ",
+      "[E] at the start of your turn."
+    ]
+  }
+}
