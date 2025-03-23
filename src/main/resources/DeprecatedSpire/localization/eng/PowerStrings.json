@@ -4,5 +4,16 @@
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
+  },
+
+  "${modID}:FlickPower": {
+    "NAME": "Flick",
+    "DESCRIPTIONS": [
+      "When this enemy gets #yFlick #b",
+      "2 more times, it receives #b",
+      "1 more time, it receives #b",
+      " damage."
+    ]
   }
+
 }
