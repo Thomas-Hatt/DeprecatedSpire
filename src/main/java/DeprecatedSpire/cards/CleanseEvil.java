@@ -39,6 +39,7 @@ public class CleanseEvil extends BaseCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.cardsToPreview.upgrade();
+
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

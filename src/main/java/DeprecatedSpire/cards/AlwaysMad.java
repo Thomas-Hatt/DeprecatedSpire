@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class AlwaysMad extends BaseCard {
     public static final String ID = makeID(AlwaysMad.class.getSimpleName());
+
     private static final CardStats info = new CardStats(
             CardColor.PURPLE,
             CardType.POWER,
@@ -35,7 +36,7 @@ public class AlwaysMad extends BaseCard {
     }
 
     @Override
-    public AbstractCard makeCopy() { //Optional
+    public AbstractCard makeCopy() {
         return new AlwaysMad();
     }
 }

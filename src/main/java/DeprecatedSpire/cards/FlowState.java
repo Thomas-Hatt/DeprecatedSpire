@@ -1,38 +1,39 @@
 package DeprecatedSpire.cards;
 
 import DeprecatedSpire.util.CardStats;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.EmotionalTurmoilAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.deprecated.DEPRECATEDDisciplinePower;
 
-public class Discipline extends BaseCard {
-    // If you end your turn with unused [W] , draw that many additional cards next turn.
+public class FlowState extends BaseCard {
+    // "DESCRIPTION": "Wrath: Enter Calm. NL Calm: Enter Wrath. NL Exhaust.",
+    // "UPGRADE_DESCRIPTION": "Wrath: Enter Calm. NL Calm: Enter Wrath."
 
-    public static final String ID = makeID(Discipline.class.getSimpleName());
+    public static final String ID = makeID(FlowState.class.getSimpleName());
+
     private static final CardStats info = new CardStats(
             CardColor.PURPLE,
-            CardType.POWER,
-            CardRarity.RARE,
+            CardType.SKILL,
+            CardRarity.UNCOMMON,
             CardTarget.SELF,
-            2
+            1
     );
 
-    public Discipline() {
+    public FlowState() {
         super(ID, info);
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new DEPRECATEDDisciplinePower(p)));
+        this.addToBot(new EmotionalTurmoilAction());
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
+            this.exhaust = false;
 
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
@@ -40,7 +41,7 @@ public class Discipline extends BaseCard {
     }
 
     @Override
-    public AbstractCard makeCopy() { //Optional
-        return new Discipline();
+    public AbstractCard makeCopy() {
+        return new FlowState();
     }
 }

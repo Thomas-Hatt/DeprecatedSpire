@@ -1,45 +1,48 @@
 package DeprecatedSpire.cards;
 
 import DeprecatedSpire.util.CardStats;
-import com.megacrit.cardcrawl.actions.watcher.UnravelingAction;
+import com.megacrit.cardcrawl.actions.watcher.ClarityAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Unraveling extends BaseCard {
-    // Play all of your cards from left to right. Targets are chosen randomly. Exhaust.
+public class Clarity extends BaseCard {
+    // "DESCRIPTION": "Look at the top !M! cards of your draw pile. Add 1 to your hand. NL Exhaust the other.",
+    // "UPGRADE_DESCRIPTION": "Look at the top !M! cards of your draw pile. Add 1 to your hand. NL Exhaust the rest."
 
-    public static final String ID = makeID(Unraveling.class.getSimpleName());
+    public static final String ID = makeID(Clarity.class.getSimpleName());
+
     private static final CardStats info = new CardStats(
             CardColor.PURPLE,
             CardType.SKILL,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             CardTarget.NONE,
-            2
+            1
     );
 
-    public Unraveling() {
+    public Clarity() {
         super(ID, info);
-        this.exhaust = true;
+
+        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new UnravelingAction());
+        this.addToBot(new ClarityAction(this.magicNumber));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
-
+            this.upgradeMagicNumber(1);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }
 
     @Override
-    public AbstractCard makeCopy() { //Optional
-        return new Unraveling();
+    public AbstractCard makeCopy() {
+        return new Clarity();
     }
 }

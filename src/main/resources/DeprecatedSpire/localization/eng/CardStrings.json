@@ -1,15 +1,4 @@
 {
-  "${modID}:ExampleCard": {
-    "NAME": "Name",
-    "DESCRIPTION": "Description. NL Second line.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
-  },
-
   "${modID}:AlwaysMad": {
     "NAME": "Always Mad",
     "DESCRIPTION": "No longer receive double damage while in Wrath."
@@ -39,5 +28,44 @@
   "${modID}:Flick": {
     "NAME": "Flick",
     "DESCRIPTION": "Deal !D! damage. NL If an enemy is *Flicked 3 times, they take !M! damage."
+  },
+
+  "${modID}:Truth": {
+    "NAME": "Truth",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Draw !M! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Draw !M! cards. NL Exhaust."
+  },
+
+  "${modID}:Wisdom": {
+    "NAME": "Wisdom",
+    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
+  },
+
+  "${modID}:Clarity": {
+    "NAME": "Clarity",
+    "DESCRIPTION": "Look at the top !M! cards of your draw pile. Add 1 to your hand. NL Exhaust the other.",
+    "UPGRADE_DESCRIPTION": "Look at the top !M! cards of your draw pile. Add 1 to your hand. NL Exhaust the rest."
+  },
+
+  "${modID}:Prediction": {
+    "NAME": "Prediction",
+    "DESCRIPTION": "Gain !B! Block at the start of your next turn."
+  },
+
+  "${modID}:RetreatingHand": {
+    "NAME": "Retreating Hand",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. If the previous card played was an Attack, return this card to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. If the previous card played was an Attack, return this card to your hand."
+  },
+
+  "${modID}:Retribution": {
+    "NAME": "Retribution",
+    "DESCRIPTION": "Whenever you lose HP, gain !M! Vigor."
+  },
+
+  "${modID}:FlowState": {
+    "NAME": "Flow State",
+    "DESCRIPTION": "Wrath: Enter Calm. NL Calm: Enter Wrath. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Wrath: Enter Calm. NL Calm: Enter Wrath."
   }
 }

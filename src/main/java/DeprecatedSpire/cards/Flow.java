@@ -26,8 +26,10 @@ public class Flow extends BaseCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeBaseCost(2);
-        }
 
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
+        }
     }
 
     @Override

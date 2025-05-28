@@ -1,49 +1,52 @@
 package DeprecatedSpire.cards;
 
-import DeprecatedSpire.powers.FlickPower;
 import DeprecatedSpire.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Flick extends BaseCard {
+public class Wisdom extends BaseCard {
+    // "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
+    // No upgrade.
 
-    public static final String ID = makeID(Flick.class.getSimpleName());
+    public static final String ID = makeID(Wisdom.class.getSimpleName());
 
     private static final CardStats info = new CardStats(
-            CardColor.PURPLE,
-            CardType.ATTACK,
-            CardRarity.COMMON,
-            CardTarget.ENEMY,
+            CardColor.COLORLESS,
+            CardType.SKILL,
+            CardRarity.UNCOMMON,
+            CardTarget.SELF,
             1
     );
 
-    public Flick() {
+    public Wisdom() {
         super(ID, info);
-        this.baseDamage = 4;
-        this.baseMagicNumber = 50;
+
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.selfRetain = true;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        this.addToBot(new ApplyPowerAction(m, p, new FlickPower(m, 1), 1));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        this.addToBot(new DrawCardAction(this.magicNumber));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
+            this.upgradeMagicNumber(1);
         }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new Flick();
+        return new Wisdom();
     }
 }
