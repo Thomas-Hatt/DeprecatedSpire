@@ -1,5 +1,21 @@
 # Changelog
 
+## Version 0.0.4 - May 28, 2025
+
+**Restored Cards:**
+
+* **Big Brain:** Retain. Draw 1 card. Exhaust.
+  * **Upgrade:** Retain. Draw 1 card.
+* **Polymath:** Enter Calm or Wrath. Exhaust.
+* **Survey:** Gain 8 Block. Gain 2 Vigor.
+  * **Upgrade:** Gain 11 Block. Gain 3 Vigor.
+* **Torrent:** Deal 1 damage to ALL enemies 4 times. Exhaust
+  * **Upgrade:** Deal 1 damage to ALL enemies 6 times. Exhaust
+* **Windup:** Deal 6 damage. Gain 3 Vigor.
+  * **Upgrade:** Deal 9 damage. Gain 4 Vigor.
+
+---
+
 ## Version 0.0.3 - May 28, 2025
 
 **Restored Cards:**

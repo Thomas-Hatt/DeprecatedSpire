@@ -63,6 +63,32 @@
     "DESCRIPTION": "Whenever you lose HP, gain !M! Vigor."
   },
 
+  "${modID}:Survey": {
+    "NAME": "Survey",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vigor."
+  },
+
+  "${modID}:Torrent": {
+    "NAME": "Torrent",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL Exhaust."
+  },
+
+  "${modID}:BigBrain": {
+    "NAME": "Big Brain",
+    "DESCRIPTION": "Retain. NL Draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw 1 card."
+  },
+
+  "${modID}:Polymath": {
+    "NAME": "Polymath",
+    "DESCRIPTION": "Enter Calm or Wrath. NL Exhaust."
+  },
+
+  "${modID}:Windup": {
+    "NAME": "Windup",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Vigor."
+  },
+
   "${modID}:FlowState": {
     "NAME": "Flow State",
     "DESCRIPTION": "Wrath: Enter Calm. NL Calm: Enter Wrath. NL Exhaust.",
