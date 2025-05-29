@@ -1,44 +1,47 @@
 package DeprecatedSpire.cards;
 
+import DeprecatedSpire.powers.SerenityPower;
 import DeprecatedSpire.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.deprecated.DEPRECATEDDisciplinePower;
+import com.megacrit.cardcrawl.powers.deprecated.DEPRECATEDSerenityPower;
 
-public class Discipline extends BaseCard {
-    // If you end your turn with unused [W] , draw that many additional cards next turn.
+public class Serenity extends BaseCard {
+    // "DESCRIPTION": "While you are in Calm, HP loss is reduced by !M!.",
+    // No upgrade description.
 
-    public static final String ID = makeID(Discipline.class.getSimpleName());
+    public static final String ID = makeID(Serenity.class.getSimpleName());
+
     private static final CardStats info = new CardStats(
             CardColor.PURPLE,
             CardType.POWER,
             CardRarity.RARE,
             CardTarget.SELF,
-            2
+            1
     );
 
-    public Discipline() {
+    public Serenity() {
         super(ID, info);
-        this.exhaust = true;
+        this.baseMagicNumber = 2;
+        this.magicNumber = 2;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new DEPRECATEDDisciplinePower(p)));
+        this.addToBot(new ApplyPowerAction(p, p, new SerenityPower(p, this.magicNumber), this.magicNumber));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
-            this.initializeDescription();
+            this.upgradeMagicNumber(1);
         }
     }
 
     @Override
-    public AbstractCard makeCopy() { //Optional
-        return new Discipline();
+    public AbstractCard makeCopy() {
+        return new Serenity();
     }
 }

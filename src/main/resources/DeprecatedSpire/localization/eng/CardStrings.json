@@ -89,6 +89,32 @@
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Vigor."
   },
 
+  "${modID}:Blessed": {
+    "NAME": "Blessed",
+    "DESCRIPTION": "Shuffle !M! *Miracles into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle !M! *Miracles+ into your draw pile. NL Exhaust."
+  },
+
+  "${modID}:Serenity": {
+    "NAME": "Serenity",
+    "DESCRIPTION": "While you are in Calm, HP loss is reduced by !M!."
+  },
+
+  "${modID}:Eruption": {
+    "NAME": "Eruption",
+    "DESCRIPTION": "Deal !D! damage. NL Enter Wrath."
+  },
+
+  "${modID}:Allocate": {
+    "NAME": "Allocate",
+    "DESCRIPTION": "Gain !M! Focus. NL Lose 1 Strength. NL Lose 1 Dexterity."
+  },
+
+  "${modID}:Blaster": {
+    "NAME": "Blaster",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 Energy for each Channeled Orb. NL Exhaust."
+  },
+
   "${modID}:FlowState": {
     "NAME": "Flow State",
     "DESCRIPTION": "Wrath: Enter Calm. NL Calm: Enter Wrath. NL Exhaust.",

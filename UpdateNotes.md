@@ -1,5 +1,27 @@
 # Changelog
 
+## Version 0.0.5 - May 29, 2025
+
+**Restored Cards:**
+
+* **Allocate:** Gain 1 Focus. Lose 1 Strength. Lose 1 Dexterity.
+  * **Upgrade:** Gain 2 Focus. Lose 1 Strength. Lose 1 Dexterity.
+* **Blaster:** Deal 7 damage to ALL enemies. Gain 1 Energy for each Channeled Orb. Exhaust.
+* * **Upgrade:** Deal 10 damage to ALL enemies. Gain 1 Energy for each Channeled Orb. Exhaust.
+* **Blessed:** Shuffle 2 Miracles into your draw pile. Exhaust.
+* * **Upgrade:** Shuffle 2 Miracles+ into your draw pile. Exhaust.
+* **Eruption:** Deal 18 damage. Enter Wrath.
+* * **Upgrade:** Deal 25 damage. Enter Wrath.
+* **Serenity:** While you are in Calm, HP loss is reduced by 2.
+* * **Upgrade:** While you are in Calm, HP loss is reduced by 3.
+
+I still need to finish the following activities:
+1. Restore the following 6 cards: Flux Capacitor, Reprieve, Conserve Battery, Nova, Lock-On, and Undo
+2. Restore the following Relic: Discerning Monocle
+3. Restore the following Potion: Old Elixir
+4. Restore the following 5 Daily Modifiers: Colossus, Restless Journey, Careless, Uncertain Future, and Brewmaster 
+5. Create artwork for each card, including beta artwork
+
 ## Version 0.0.4 - May 28, 2025
 
 **Restored Cards:**

@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 public class FlickPower extends AbstractPower {
     public static final String POWER_ID = "FlickPower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    private static final int FLICK_DMG = 50;
 
     public FlickPower(AbstractCreature owner, int amt) {
         this.name = powerStrings.NAME;
