@@ -26,16 +26,13 @@ public class SerenityPower extends AbstractPower {
         this.loadRegion("platedarmor");
     }
 
-    public void playApplyPowerSfx() {
-    }
-
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + LocalizedStrings.PERIOD;
     }
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0 && ((AbstractPlayer)this.owner).stance.ID.equals("Calm")) {
+        if (damageAmount > 0 && ((AbstractPlayer) this.owner).stance.ID.equals("Calm")) {
             this.flash();
             damageAmount -= this.amount;
             if (damageAmount < 0) {

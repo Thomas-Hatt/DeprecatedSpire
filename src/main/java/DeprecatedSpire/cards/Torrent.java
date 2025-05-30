@@ -40,7 +40,7 @@ public class Torrent extends BaseCard {
         this.addToBot(new VFXAction(new BorderLongFlashEffect(Color.CYAN)));
         this.addToBot(new ShakeScreenAction(0.0F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.HIGH));
 
-        for(int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
 

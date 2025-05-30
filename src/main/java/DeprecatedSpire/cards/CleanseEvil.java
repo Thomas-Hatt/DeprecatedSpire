@@ -29,7 +29,7 @@ public class CleanseEvil extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c = new Smite();
         if (this.upgraded) {
-            ((AbstractCard)c).upgrade();
+            ((AbstractCard) c).upgrade();
         }
 
         this.addToBot(new DivinePunishmentAction(c, this.freeToPlayOnce, this.energyOnUse));
@@ -43,11 +43,10 @@ public class CleanseEvil extends BaseCard {
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
-
     }
 
     @Override
-    public AbstractCard makeCopy() { //Optional
+    public AbstractCard makeCopy() {
         return new CleanseEvil();
     }
 }

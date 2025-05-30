@@ -26,8 +26,8 @@ public class FlickPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         this.amount += stackAmount;
         if (this.amount >= 3) {
-            this.addToBot(new DamageAction(this.owner, new DamageInfo((AbstractCreature)null, 50, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY, true));
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, (AbstractCreature)null, "FlickPower"));
+            this.addToBot(new DamageAction(this.owner, new DamageInfo((AbstractCreature) null, 50, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY, true));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, (AbstractCreature) null, "FlickPower"));
         } else {
             this.fontScale = 8.0F;
             this.updateDescription();

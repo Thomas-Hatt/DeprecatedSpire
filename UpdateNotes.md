@@ -1,5 +1,24 @@
 # Changelog
 
+## Version 0.0.6 - May 30, 2025
+
+**Restored Cards:**
+
+* **Flux Capacitor:** Replace all Channeled Orbs with Plasma. Exhaust.
+* **Reprieve:** If the enemy does not intend to attack, gain 1 Focus.
+  * **Upgrade:** If the enemy does not intend to attack, gain 2 Focus.
+* **Conserve Battery** Gain 8 Block. Energy is conserved for next turn.
+  * **Upgrade:** Gain 11 Block. Energy is conserved for next turn.
+* **Nova** Deal X damage to all enemies. Damage is increased by 3 times the number of Power cards played this combat.
+  * **Upgrade:** Deal X damage to all enemies. Damage is increased by 4 times the number of Power cards played this combat.
+
+I still need to finish the following activities:
+1. Restore the following 2 Cards: Lock-On, and Undo
+2. Restore the following Relic: Discerning Monocle
+3. Restore the following Potion: Old Elixir
+4. Restore the following 5 Daily Modifiers: Colossus, Restless Journey, Careless, Uncertain Future, and Brewmaster
+5. Create artwork for each card, including beta artwork
+
 ## Version 0.0.5 - May 29, 2025
 
 **Restored Cards:**
